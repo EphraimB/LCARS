@@ -1,0 +1,11 @@
+header{background-color: white !important;}
+.headerText{position: absolute; top: 10%; left: 76%; color: orange;}
+
+.block{background-color: red;}
+.endBlock{background-color: red; border-top-right-radius: 100%; border-bottom-right-radius: 100%;}
+
+#topBlock{position: absolute; top: 10%; left: 25%; width: 50%; height: 50%;}
+#topRightEndBlock{position: absolute; top: 10%; right: 5%; width: 5%; height: 50%;}
+
+#topLeftCornerBlock{position: absolute; left: 2%; top: 10%; width: 20%; height: 50%; background-color: red; border-top-left-radius: 50%;}
+#topLeftCornerBlockTwo{position: absolute; left: 2%; top: 60%; width: 10%; height: 40%; background-color: red;}
