@@ -1,55 +1,35 @@
-var header = document.getElementsByTagName("header")[0];
-var headerText = header.children;
+const siteHeader = document.querySelector("header");
+const mainNavigation = document.querySelector("nav");
+const navItems = mainNavigation.children;
 
-var nav = document.getElementsByTagName("nav")[0];
-var navText = nav.children;
+const createNavItemContainer = () => {
+  const navItemContainer = document.createElement("div");
+  navItemContainer.classList.add("navBlock");
+  return navItemContainer;
+};
 
-var navBlockOne = document.createElement("div");
-navBlockOne.setAttribute("class", "navBlock");
-navBlockOne.setAttribute("id", "navBlockOne");
+const navItemContainers = Array.from({ length: 4 }, createNavItemContainer);
 
-var navBlockTwo = document.createElement("div");
-navBlockTwo.setAttribute("class", "navBlock");
-navBlockTwo.setAttribute("id", "navBlockTwo");
+navItemContainers.forEach((container, index) => {
+  container.appendChild(navItems[0].children[index]);
+  mainNavigation.appendChild(container);
+});
 
-var navBlockThree = document.createElement("div");
-navBlockThree.setAttribute("class", "navBlock");
-navBlockThree.setAttribute("id", "navBlockThree");
+const topBlock = document.createElement("div");
+topBlock.classList.add("block");
+topBlock.id = "topBlock";
 
-var navBlockFour = document.createElement("div");
-navBlockFour.setAttribute("class", "navBlock");
-navBlockFour.setAttribute("id", "navBlockFour");
+const topRightEndBlock = document.createElement("div");
+topRightEndBlock.classList.add("endBlock");
+topRightEndBlock.id = "topRightEndBlock";
 
-for(var i = 0; i < headerText.length; i++)
-{
-    headerText[i].setAttribute("class", "headerText");
-}
+const topLeftCornerBlock = document.createElement("div");
+topLeftCornerBlock.id = "topLeftCornerBlock";
 
-var topBlock = document.createElement("div");
-topBlock.setAttribute("class", "block");
-topBlock.setAttribute("id", "topBlock");
+const topLeftCornerBlockTwo = document.createElement("div");
+topLeftCornerBlockTwo.id = "topLeftCornerBlockTwo";
 
-var topRightEndBlock = document.createElement("div");
-topRightEndBlock.setAttribute("class", "endBlock");
-topRightEndBlock.setAttribute("id", "topRightEndBlock");
-
-var topLeftCornerBlock = document.createElement("div");
-topLeftCornerBlock.setAttribute("id", "topLeftCornerBlock");
-
-var topLeftCornerBlockTwo = document.createElement("div");
-topLeftCornerBlockTwo.setAttribute("id", "topLeftCornerBlockTwo");
-
-header.appendChild(topBlock);
-header.appendChild(topRightEndBlock);
-header.appendChild(topLeftCornerBlock);
-header.appendChild(topLeftCornerBlockTwo);
-
-nav.appendChild(navBlockOne);
-nav.appendChild(navBlockTwo);
-nav.appendChild(navBlockThree);
-nav.appendChild(navBlockFour);
-
-navBlockOne.appendChild(navText[0].children[0]);
-navBlockTwo.appendChild(navText[0].children[0]);
-navBlockThree.appendChild(navText[0].children[0]);
-navBlockFour.appendChild(navText[0].children[0]);
+siteHeader.appendChild(topBlock);
+siteHeader.appendChild(topRightEndBlock);
+siteHeader.appendChild(topLeftCornerBlock);
+siteHeader.appendChild(topLeftCornerBlockTwo);
