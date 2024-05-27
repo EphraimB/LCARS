@@ -1,8 +1,8 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "LCARS extension",
     "description": "A Google Chrome extension that switches the style sheet to the Star Trek LCARS interface",
-    "version": "0.2.0",
+    "version": "0.3.0",
 
     "content_scripts": [
     {
